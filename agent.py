@@ -1,6 +1,7 @@
 import datetime
 from zoneinfo import ZoneInfo
-from google.adk.agents import Agent
+from google.adk.agents import LlmAgent
+from google.adk.models.lite_llm import LiteLlm
 
 def get_weather(city: str) -> dict:
     """Retrieves the current weather report for a specified city.
@@ -54,9 +55,11 @@ def get_current_time(city: str) -> dict:
     return {"status": "success", "report": report}
 
 
-root_agent = Agent(
+root_agent = LlmAgent(
     name="weather_time_agent",
-    model="gemini-2.0-flash",
+    model=LiteLlm(
+        model="ollama_chat/PetrosStav/gemma3-tools:4b",
+        api_base="http://localhost:11434"),
     description=(
         "Agent to answer questions about the time and weather in a city."
     ),
