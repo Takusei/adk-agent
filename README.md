@@ -74,7 +74,7 @@ def get_webpage_text(url: str) -> str:
 
 ---
 
-## 📂 Project Structure (example)
+## 📂 Project Structure
 
 ```
 .
