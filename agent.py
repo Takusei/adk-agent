@@ -1,7 +1,7 @@
 from google.adk.agents import LlmAgent
 from .config import model_config, AGENT_NAME, AGENT_DESCRIPTION
 from .prompts import INSTRUCTION
-from .tools.fetch import get_webpage_text
+from .tools.web_fetcher import get_webpage_text
 
 root_agent = LlmAgent(
     name=AGENT_NAME,

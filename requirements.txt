@@ -1,5 +1,5 @@
-google-adk=1.0.0
-litellm=1.71.1
+google-adk==1.0.0
+litellm==1.71.1
 beautifulsoup4==4.13.4
 requests-file==2.1.0
 soupsieve==2.7
